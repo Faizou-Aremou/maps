@@ -1,1 +1,1 @@
-stephen grider example projet on Typescript the complete developper guide
+stephen Grider example project on Typescript the complete developer guide
