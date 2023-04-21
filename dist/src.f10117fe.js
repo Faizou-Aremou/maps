@@ -22826,8 +22826,22 @@ var Company_1 = require("./Company");
 var user_1 = require("./user");
 var user = new user_1.User();
 var company = new Company_1.Company();
+//AIzaSyBJTsXVOetOvmaKFB9zNsZR7pgx9d8q9wk
 console.log('', user);
 console.log('', company);
+var mapElement = document.querySelector('#map');
+if (isHTMLELement(mapElement)) {
+  new google.maps.Map(mapElement, {
+    zoom: 1,
+    center: {
+      lat: 0,
+      lng: 0
+    }
+  });
+}
+function isHTMLELement(htmlElement) {
+  return htmlElement !== null;
+}
 },{"./Company":"src/Company.ts","./user":"src/user.ts"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -22853,7 +22867,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60378" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57052" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
