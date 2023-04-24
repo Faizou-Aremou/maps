@@ -1,15 +1,20 @@
 /// <reference types="@types/google.maps" />
 import { Company } from "./Company";
+import { CustomMap } from "./CustomMap";
 import { User } from "./User";
 
 const user = new User();
 const company = new Company();
-//AIzaSyBJTsXVOetOvmaKFB9zNsZR7pgx9d8q9wk
 console.log('', user);
 console.log('', company);
 const mapElement = document.querySelector('#map');
+const marketPopupContent = 'Hi there'
+if (isHTMLELement(mapElement)) {
+  const map = new CustomMap(mapElement)
+  map.addMaker({...user, markerContent:marketPopupContent});
+  map.addMaker({...company, markerContent:marketPopupContent});
+}
 
-if (isHTMLELement(mapElement)) { }
 function isHTMLELement(htmlElement: Element | null): htmlElement is HTMLElement {
   return (htmlElement as HTMLElement) !== null
 }
